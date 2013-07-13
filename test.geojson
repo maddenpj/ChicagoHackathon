@@ -1,1 +1,1 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","id":0,"properties":{"marker-color":"#B20000","name":"Bridgeport","url":"http://www.chicagofarmersmarkets.us"},"geometry":{"type":"Point","coordinates":[-87.63241000012124,41.88415000022252,0]}}]
+{"type":"FeatureCollection","features":[{"type":"Feature","id":0,"properties":{"marker-color":"#B20000","name":"Bridgeport","url":"http://www.chicagofarmersmarkets.us"},"geometry":{"type":"Point","coordinates":[-87.63241000012124,41.88415000022252,0]}}]}
