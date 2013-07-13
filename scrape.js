@@ -1,6 +1,7 @@
 var https = require('https')
 
 
+var magic = 7;
 json = {}
 https.get("https://data.cityofchicago.org/api/views/q3z3-udcz/rows.json?accessType=DOWNLOAD", function(res){
   var data = '';
@@ -24,7 +25,9 @@ function parse(json) {
   for( var i in json.data ) {
     var row = json.data[i];
 
-    var geoRow = { type: "Feature", id: id, properties: {}, geometry: { type: "Point", "coordinates" : [parseFloat(row[21]), parseFloat(row[20]), 0.0] } };
+    var pcnt = parseFloat(row[18])/parseFloat(row[17]);
+    var pString = (pcnt*100.0).toFixed(1) + "%";
+    var geoRow = { type: "Feature", id: id, properties: { "Vegetated Percentage": pString, "marker-symbol": "garden"}, geometry: { type: "Point", "coordinates" : [parseFloat(row[21]), parseFloat(row[20]), 0.0] } };
     geoJson.features.push(geoRow);
     id++;
   }
