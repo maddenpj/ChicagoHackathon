@@ -39,7 +39,7 @@ function parse(json) {
 
     var lat = parseFloat(row[14]), long = parseFloat(row[15]);
     var geoRow = { type: "Feature", id: id, properties:{}, geometry: { type: "Point", "coordinates" : [long, lat, 0.0] } };
-    geoRow.properties["marker-color"] = randColor();
+    // geoRow.properties["marker-color"] = randColor();
     geoJson.features.push(geoRow);
     id++;
   }
