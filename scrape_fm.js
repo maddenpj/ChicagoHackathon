@@ -82,7 +82,9 @@ function parse(json) {
 
     geoRow.properties.name = row[8];
     geoRow.properties.url = row[15][0];
-    geoRow.properties["marker-symbol"] = isOpen(start, end) ? "marker" : "cross";
+    if(!isOpen(start,end)) {
+      geoRow.properties["marker-symbol"] = "cross";
+    }
 
     geoJson.features.push(geoRow);
     id++;
