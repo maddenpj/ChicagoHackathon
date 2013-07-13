@@ -22,7 +22,7 @@ https.get("https://data.cityofchicago.org/api/views/q3z3-udcz/rows.json?accessTy
 function colorToHex(color) {
   var red = color.R, green = color.G, blue = color.B;
   var rgb = blue | (green << 8) | (red << 16);
-  return '#' + ("000000" + rgb.toString(16)).substr(-6);
+  return ('#' + ("000000" + rgb.toString(16)).substr(-6)).toUpperCase();
 }
 
 
