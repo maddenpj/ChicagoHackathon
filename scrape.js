@@ -24,7 +24,7 @@ function parse(json) {
   for( var i in json.data ) {
     var row = json.data[i];
 
-    var geoRow = { type: "Feature", id: id, properties: {}, geometry: { type: "Point", "coordinates" : [parseFloat(row[20]), parseFloat(row[21])] } };
+    var geoRow = { type: "Feature", id: id, properties: {}, geometry: { type: "Point", "coordinates" : [parseFloat(row[21]), parseFloat(row[20])] } };
     geoJson.features.push(geoRow);
     id++;
   }
