@@ -34,10 +34,6 @@ function parse(json) {
     var start = Date.parse(row[13]);
     var end = Date.parse(row[14]);
 
-    if( id == 0) {
-      end = (new Date()).setMonth(5);
-    }
-
 
     var color = isOpen(start,end) ? "#00B200" : "#B20000";
     var lat = parseFloat(row[18]), long = parseFloat(row[19]);
